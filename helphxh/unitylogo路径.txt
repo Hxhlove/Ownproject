@@ -1,0 +1,4 @@
+"\Unity\Editor\Data\PlaybackEngines\WebGLSupport\BuildTools\WebGLTemplates"
+自制模板放在这个下面
+
+Publishing Settings中 正式版发布webgl的时候 需要关闭Enable Exceptions

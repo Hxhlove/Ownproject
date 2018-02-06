@@ -1,0 +1,118 @@
+<input type="text" name="username" value=""/>
+后台：
+String username=request.getParameter("username");//就可以取到了
+
+public void JudgeFinger ()  
+	{  
+		//没有触摸  
+		if (Input.touchCount <= 0) 
+		{  
+			return;  
+		}  
+
+		if (Input.GetTouch (0).phase == TouchPhase.Began ) 
+		{ 
+			startFingerPos = Input.GetTouch (0).position;  
+		}  
+
+		nowFingerPos = Input.GetTouch (0).position;  
+
+		if ((Input.GetTouch (0).phase == TouchPhase.Stationary) || (Input.GetTouch(0).phase == TouchPhase.Ended)) 
+		{  
+			startFingerPos = nowFingerPos;    
+			return;  
+		}  
+		//          if (Input.GetTouch(0).phase == TouchPhase.Ended) {  
+		//                
+		//          }  
+		if (startFingerPos == nowFingerPos) 
+		{  
+			return;  
+		}  
+		xMoveDistance = Mathf.Abs (nowFingerPos.x - startFingerPos.x);  
+		yMoveDistance = Mathf.Abs (nowFingerPos.y - startFingerPos.y);  
+
+		if (xMoveDistance > yMoveDistance)
+		{  
+			if (nowFingerPos.x - startFingerPos.x > 0) 
+			{   
+				backValue = -1; //沿着X轴负方向移动  
+			} else 
+			{ 
+				//Debug.Log("=======沿着X轴正方向移动=====");  
+				backValue = 1; //沿着X轴正方向移动 
+			}  
+			this.transform.Rotate (Vector3.up * backValue*xMoveDistance);
+		}
+		else 
+		{ 
+			if (nowFingerPos.y - startFingerPos.y > 0) 
+			{  
+				//Debug.Log("=======沿着Y轴正方向移动=====");  
+				backValue = 2; //沿着Y轴正方向移动  
+			}
+			else 
+			{  
+				//Debug.Log("=======沿着Y轴负方向移动=====");  
+				backValue = -2; //沿着Y轴负方向移动  
+			} 
+			this.transform.Rotate (Vector3.right * backValue*yMoveDistance);
+			if (transform.rotation.x > 0) 
+			{
+				transform.rotation = Quaternion.Euler (0,transform.rotation.y,transform.rotation.z);
+			}
+			if (this.transform.rotation.x < -90)
+			{
+				transform.rotation = Quaternion.Euler (transform.rotation.x,-90,transform.rotation.z);
+			}
+		}
+	}  
+
+
+
+//pc和手机端一起响应
+using UnityEngine;
+using System.Collections;
+ 
+public class JFConst
+{
+ 
+	public static  bool TouchBegin()
+	{
+		if(Input.GetMouseButtonDown(0))
+		{
+			return true;
+		}
+		if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+		{
+			return true;
+		}
+		return false;
+	}
+ 
+	public static bool TouchEnd()
+	{
+		if(Input.GetMouseButtonUp(0))
+		{
+			return true;
+		}
+		if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
+		{
+			return true;
+		}
+		return false;
+	}
+ 
+	public static bool TouchIng()
+	{
+		if(Input.GetMouseButton(0))
+		{
+			return true;
+		}else if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+		{
+			return true;
+		}
+		return false;
+	}
+ 
+}

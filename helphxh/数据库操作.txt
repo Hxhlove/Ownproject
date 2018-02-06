@@ -1,0 +1,52 @@
+ALTER  TABLE  `informationpeople` DROP `id`;//删除主键
+ALTER  TABLE  `informationpeople` ADD `id` MEDIUMINT( 8 ) NOT NULL  FIRST;//添加组件
+ALTER  TABLE  `informationpeople` MODIFY COLUMN  `id` MEDIUMINT( 8 ) NOT NULL  AUTO_INCREMENT,ADD PRIMARY  KEY(id);//设置组件
+
+//获得绕Y轴旋转的角度
+	public float GetAangleY()
+	{
+		float angleY = Random.Range (minRotateY,maxRotateY);
+		return angleY;
+	}
+	//获得缩放的值
+	public Vector3 GetScale()
+	{
+		float scaleValue = Random.Range (minScale,maxScale);
+		Vector3 modeScale = new Vector3 (scaleValue,scaleValue,scaleValue);
+		return modeScale;
+	}
+	//获得要创建的模型
+	public GameObject GetMode()
+	{
+		GameObject instanceMode = mode[Random.Range(0,mode.Length)];
+		instanceMode.transform.localScale = GetScale ();
+		instanceMode.transform.eulerAngles = new Vector3 (0,GetAangleY(),0);
+		instanceMode.transform.position = modePosition;
+		return instanceMode;
+	}
+
+   建表
+use websqlone
+CREATE TABLE InformationPeople
+(
+	 id INT NOT NULL AUTO_INCREMENT,
+   	name VARCHAR(50) NULL ,
+	 phone VARCHAR(50)NULL,
+	meetTime VARCHAR(50) NULL,
+	oldTime timestamp not null default current_timestamp,
+	PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE alphaInformation
+(
+	 id INT NOT NULL AUTO_INCREMENT,
+   	name VARCHAR(50) NULL ,
+	 phone VARCHAR(50)NULL,
+	idCard VARCHAR(50)NULL,
+	PRIMARY KEY (`ID`)
+);
+
+路径：
+www.alphavisual.cn:8080/Xijiangyue/ServletSelect
+创建数据库
+CREATE DATABASE `DB_NAME` DEFAULT CHARACTER SET UTF8 COLLATE utf8_general_ci;
