@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: e36aec1c3e8699c48af527af58c055cc
+timeCreated: 1517852493
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Camerich jane sofa
+    100002: HAY SLIT TABLE
+    100004: shade
+    100006: Sky001
+    100008: STL-CH-003
+    100010: yuanwuxiezitai01-01
+    100012: yuanwuxiezitai04-04
+    100014: yuanwuxiezitaichouti01-01
+    100016: yuanwuxiezitaichouti04-04
+    100018: //RootNode
+    100020: "\u3000\uE813\uE811"
+    100022: "\uE814\uE812"
+    400000: Camerich jane sofa
+    400002: HAY SLIT TABLE
+    400004: shade
+    400006: Sky001
+    400008: STL-CH-003
+    400010: yuanwuxiezitai01-01
+    400012: yuanwuxiezitai04-04
+    400014: yuanwuxiezitaichouti01-01
+    400016: yuanwuxiezitaichouti04-04
+    400018: //RootNode
+    400020: "\u3000\uE813\uE811"
+    400022: "\uE814\uE812"
+    2300000: Camerich jane sofa
+    2300002: HAY SLIT TABLE
+    2300004: shade
+    2300006: STL-CH-003
+    2300008: yuanwuxiezitai01-01
+    2300010: yuanwuxiezitai04-04
+    2300012: yuanwuxiezitaichouti01-01
+    2300014: yuanwuxiezitaichouti04-04
+    3300000: Camerich jane sofa
+    3300002: HAY SLIT TABLE
+    3300004: shade
+    3300006: STL-CH-003
+    3300008: yuanwuxiezitai01-01
+    3300010: yuanwuxiezitai04-04
+    3300012: yuanwuxiezitaichouti01-01
+    3300014: yuanwuxiezitaichouti04-04
+    4300000: Camerich jane sofa
+    4300002: HAY SLIT TABLE
+    4300004: shade
+    4300006: STL-CH-003
+    4300008: yuanwuxiezitai04-04
+    4300010: yuanwuxiezitaichouti04-04
+    4300012: yuanwuxiezitai01-01
+    4300014: yuanwuxiezitaichouti01-01
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
